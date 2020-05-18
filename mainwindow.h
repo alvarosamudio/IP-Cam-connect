@@ -1,21 +1,46 @@
-#ifndef MAINWINDOW_H
+﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QList>
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
+class OneVideo;
+class QPushButton;
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+	Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+	void createMenu();
+
+	void createContent();
+
+	void layoutChild();
+
+private slots:
+	void addWindowSlot();
+
+	void removeWindowSlot();
+
+	void aboutSlot();
+
+	void timerSlot();
+
+	void childClosed(OneVideo *who);
+
 private:
-    Ui::MainWindow *ui;
+	QList<OneVideo*> showList;
+
+	QWidget *mainContent;
+	QPushButton *addBtn;
+
+	QTimer *timer;
+protected:
+	void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
 };
-#endif // MAINWINDOW_H
+
+#endif
