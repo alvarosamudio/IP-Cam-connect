@@ -1,0 +1,7 @@
+Package: IPSecurityCamera
+Version: 0.1
+Maintainer: Alvaro Samudio <alvarosamudio@criptext.com>
+Section: utils
+Architecture: all
+Priority: optional
+Description: IP Security Camera
