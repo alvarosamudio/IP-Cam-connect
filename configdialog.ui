@@ -109,7 +109,7 @@
           <string/>
          </property>
          <property name="text">
-          <string>192.168.47.131</string>
+          <string>192.168.0.4</string>
          </property>
          <property name="frame">
           <bool>true</bool>
@@ -207,7 +207,7 @@
           <string/>
          </property>
          <property name="text">
-          <string>10086</string>
+          <string>8000</string>
          </property>
          <property name="maxLength">
           <number>32767</number>
